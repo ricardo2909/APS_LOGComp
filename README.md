@@ -3,7 +3,7 @@
 ## EBNF
 ```
 <programa> ::= {<declaração>}* ;
-<declaração> ::= <decl-var> | <decl-funcao> ;
+<declaração> ::= <decl-var> | <decl-funcao> | <estrutura-controle> ;
 <decl-var> ::= "var" <identificador> ":" <tipo> ["=" <expressão>] ";" ;
 <decl-funcao> ::= "funcao" <identificador> "(" [<lista-params>] ")" ":" <tipo> "{" {<declaração>}* "}" ;
 <lista-params> ::= <param> {"," <param>}* ;
@@ -17,4 +17,8 @@
 <literal-numérico> ::= <dígito> {<dígito>}* ;
 <literal-texto> ::= '"' {<caractere>}* '"' ;
 <literal-booleano> ::= "verdadeiro" | "falso" ;
+<estrutura-controle> ::= <se> | <para> ;
+<se> ::= "se" "(" <expressão> ")" <declaração> ["senão" <declaração>] ;
+<para> ::= "para" "(" [<expressão>] ";" [<expressão>] ";" [<expressão>] ")" <declaração> ;
+
 ```
