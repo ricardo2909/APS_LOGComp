@@ -1,5 +1,7 @@
 # APS_LOGComp
 
+## EBNF
+```
 <programa> ::= {<declaração>}* ;
 <declaração> ::= <decl-var> | <decl-funcao> ;
 <decl-var> ::= "var" <identificador> ":" <tipo> ["=" <expressão>] ";" ;
@@ -15,3 +17,4 @@
 <literal-numérico> ::= <dígito> {<dígito>}* ;
 <literal-texto> ::= '"' {<caractere>}* '"' ;
 <literal-booleano> ::= "verdadeiro" | "falso" ;
+```
