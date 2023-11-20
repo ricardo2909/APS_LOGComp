@@ -30,7 +30,7 @@ decl_var: VAR IDENTIFICADOR tipo
         | VAR IDENTIFICADOR tipo IGUAL expressao
         ;
 
-decl_funcao: FUNCAO IDENTIFICADOR ABRE_PARENTESES lista_params FECHA_PARENTESES ABRE_CHAVES programa FECHA_CHAVES
+decl_funcao: FUNCAO IDENTIFICADOR ABRE_PARENTESES lista_params FECHA_PARENTESES tipo ABRE_CHAVES programa FECHA_CHAVES
            ;
 
 lista_params: /* vazio */
