@@ -19,6 +19,6 @@
 <literal-booleano> ::= "verdadeiro" | "falso" ;
 <estrutura-controle> ::= <se> | <para> ;
 <se> ::= "se" "(" <expressão> ")" <declaração> ["senão" <declaração>] ;
-<para> ::= "para" "(" [<expressão>] ";" [<expressão>] ";" [<expressão>] ")" <declaração> ;
+<para> ::= "para" " [<expressão>] ";" [<expressão>] ";" [<expressão>] " <declaração> ;
 
 ```
