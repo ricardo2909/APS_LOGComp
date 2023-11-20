@@ -1,8 +1,6 @@
 var x inteiro
 var y inteiro
-funcao calcular() {
-    var a inteiro = 10
-    var b flutuante = 5.0
+funcao calcular(a inteiro, b flutuante) inteiro {
     var nome texto = "Flex"
     var flag booleano = verdadeiro
 
