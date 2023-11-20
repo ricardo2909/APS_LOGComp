@@ -1,0 +1,19 @@
+var x inteiro
+var y inteiro
+funcao calcular() {
+    var a inteiro = 10
+    var b flutuante = 5.0
+    var nome texto = "Flex"
+    var flag booleano = verdadeiro
+
+    se (a > b) {
+        x = a + b
+    }
+    senao {
+        y = a - b
+    }
+
+    para i = 0; i < 10; i = i + 1 {
+        x = x * 2
+    }
+}
