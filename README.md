@@ -3,22 +3,22 @@
 ## EBNF
 ```
 <programa> ::= {<declaração>}* ;
-<declaração> ::= <decl-var> | <decl-funcao> | <estrutura-controle> ;
-<decl-var> ::= "var" <identificador> ":" <tipo> ["=" <expressão>] ";" ;
-<decl-funcao> ::= "funcao" <identificador> "(" [<lista-params>] ")" ":" <tipo> "{" {<declaração>}* "}" ;
-<lista-params> ::= <param> {"," <param>}* ;
-<param> ::= <identificador> ":" <tipo> ;
-<expressão> ::= <identificador> | <literal> | <expressão-bin> ;
-<expressão-bin> ::= <expressão> <operador> <expressão> ;
-<operador> ::= "+" | "-" | "*" | "/" ;
-<tipo> ::= "inteiro" | "flutuante" | "texto" | "booleano" ;
-<identificador> ::= <letra> {<letra> | <dígito>}* ;
-<literal> ::= <literal-numérico> | <literal-texto> | <literal-booleano> ;
-<literal-numérico> ::= <dígito> {<dígito>}* ;
-<literal-texto> ::= '"' {<caractere>}* '"' ;
-<literal-booleano> ::= "verdadeiro" | "falso" ;
+<declaração> ::= <decl-var> | <estrutura-controle> | <decl-imprimir> | <decl-entrada> | <atribuição> | <comentário> ;
+<decl-var> ::= "var" <identificador> (":" "inteiro" | ":" "texto") ["=" <expressão>] ";" ;
+<decl-imprimir> ::= "imprimir" <expressão> ";" ;
+<decl-entrada> ::= "entrada" <identificador> ";" ;
+<atribuição> ::= <identificador> "=" <expressão> ";" ;
+<comentário> ::= "//" {<caractere>}* "\n" ;
 <estrutura-controle> ::= <se> | <para> ;
 <se> ::= "se" "(" <expressão> ")" <declaração> ["senão" <declaração>] ;
-<para> ::= "para" "(" [<expressão>] ";" [<expressão>] ";" [<expressão>] ")" <declaração> ;
+<para> ::= "para" <atribuição> ";" <expressão> ";" <atribuição> <declaração> ;
+<expressão> ::= <expressão-bin> | <identificador> | <literal> ;
+<expressão-bin> ::= <expressão> <operador> <expressão> ;
+<operador> ::= "+" | "-" | "*" | "/" | "." | "==" | ">" | "<" | "||" | "&&" ;
+<tipo> ::= "inteiro" | "texto" ;
+<identificador> ::= <letra> {<letra> | <dígito> | "_"}* ;
+<literal> ::= <literal-numérico> | <literal-texto> ;
+<literal-numérico> ::= <dígito> {<dígito>}* ;
+<literal-texto> ::= '"' {<caractere>}* '"' ;
 
 ```
